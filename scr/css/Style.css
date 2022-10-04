@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
 }
+
 header {
     position: fixed;
     width: 100%;
@@ -116,20 +117,22 @@ hr {
     margin: 280px 0px 0px 250px;
     color: #2c384a;
     text-align: center;
+    opacity: 1;
+}
+
+.title_conteiner input {
+    animation: mainmove 2s ease normal 1 forwards;
+    animation-delay: 3s;
     opacity: 0;
-    animation: mainmove 1s ease normal 1 forwards;
-    animation-delay: 2.4s;
 }
 
 @keyframes mainmove {
     from {
         opacity: 0;
-        margin-left: -300px;
     }
 
     to {
         opacity: 1;
-        margin-left: 250px;
     }
 }
 
@@ -186,8 +189,24 @@ hr {
     position: relative;
     top: 58px;
     left: 555px;
+    opacity: 0;
+    animation: Boy_grey_move 3s linear normal 1 forwards;
+    animation-delay: 0s;
 }
-
+@keyframes Boy_grey_move {
+    0% {
+        opacity: 1;
+        transform: scale(0.1);
+        left: 0px;
+        transform-origin: center;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+            left: 555px;
+        transform-origin: center;
+    }
+}
 .Aboutme_title h4 {
     width: 520px;
     position: relative;
@@ -383,16 +402,19 @@ hr {
     letter-spacing: 0px;
     transition: all 0.2s 0.01s linear;
 }
+
 .keys_Client input:hover {
     transform: scale(1.05);
     background-color: #509F99;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .keys_Client input:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 .keys_project {
     display: inline-block;
     width: 680px;
@@ -689,14 +711,17 @@ hr {
     margin: 10px 300px;
     transition: all 0.3s 0.05s linear;
 }
+
 #Cont_input_submit:hover {
     transform: scale(1.05);
 }
+
 #Cont_input_submit:active {
     transform: scale(1.05);
     background-color: white;
     color: #354051;
 }
+
 .map {
     float: left;
     width: 100%;
