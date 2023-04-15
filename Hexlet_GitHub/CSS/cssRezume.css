@@ -1,0 +1,15 @@
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+h2 {
+    font-weight: bold;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+header li {
+    display: inline;
+    margin-left: 20px;
+}
